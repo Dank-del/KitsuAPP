@@ -38,6 +38,10 @@ namespace KitsuAPP
             this.titleLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
+            this.miscInfoLabel = new System.Windows.Forms.Label();
+            this.GithubBTN = new System.Windows.Forms.Button();
+            this.AboutBTN = new System.Windows.Forms.Button();
+            this.SiteLinkLabel = new System.Windows.Forms.Label();
             this.bottompanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kitsulogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverIMGBox)).BeginInit();
@@ -46,6 +50,8 @@ namespace KitsuAPP
             // bottompanel
             // 
             this.bottompanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.bottompanel.Controls.Add(this.AboutBTN);
+            this.bottompanel.Controls.Add(this.GithubBTN);
             this.bottompanel.Controls.Add(this.OKbtn);
             this.bottompanel.Controls.Add(this.inputBox);
             this.bottompanel.Controls.Add(this.kitsulogo);
@@ -58,12 +64,16 @@ namespace KitsuAPP
             // 
             // OKbtn
             // 
+            this.OKbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(90)))), ((int)(((byte)(49)))));
+            this.OKbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.OKbtn.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OKbtn.ForeColor = System.Drawing.Color.White;
             this.OKbtn.Location = new System.Drawing.Point(713, 39);
             this.OKbtn.Name = "OKbtn";
-            this.OKbtn.Size = new System.Drawing.Size(75, 23);
+            this.OKbtn.Size = new System.Drawing.Size(75, 21);
             this.OKbtn.TabIndex = 2;
-            this.OKbtn.Text = "OK";
-            this.OKbtn.UseVisualStyleBackColor = true;
+            this.OKbtn.Text = "Okay";
+            this.OKbtn.UseVisualStyleBackColor = false;
             this.OKbtn.Click += new System.EventHandler(this.OKbtn_Click);
             // 
             // inputBox
@@ -97,6 +107,7 @@ namespace KitsuAPP
             this.coverIMGBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.coverIMGBox.TabIndex = 1;
             this.coverIMGBox.TabStop = false;
+            this.coverIMGBox.Click += new System.EventHandler(this.coverIMGBox_Click);
             // 
             // titleLabel
             // 
@@ -124,12 +135,65 @@ namespace KitsuAPP
             // dateLabel
             // 
             this.dateLabel.AutoSize = true;
-            this.dateLabel.Font = new System.Drawing.Font("Franklin Gothic Book", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.ForeColor = System.Drawing.Color.White;
             this.dateLabel.Location = new System.Drawing.Point(282, 185);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(0, 16);
+            this.dateLabel.Size = new System.Drawing.Size(0, 15);
             this.dateLabel.TabIndex = 8;
+            // 
+            // miscInfoLabel
+            // 
+            this.miscInfoLabel.AutoSize = true;
+            this.miscInfoLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.miscInfoLabel.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.miscInfoLabel.ForeColor = System.Drawing.Color.White;
+            this.miscInfoLabel.Location = new System.Drawing.Point(282, 216);
+            this.miscInfoLabel.Name = "miscInfoLabel";
+            this.miscInfoLabel.Size = new System.Drawing.Size(0, 17);
+            this.miscInfoLabel.TabIndex = 9;
+            // 
+            // GithubBTN
+            // 
+            this.GithubBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(90)))), ((int)(((byte)(49)))));
+            this.GithubBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GithubBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.GithubBTN.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GithubBTN.ForeColor = System.Drawing.Color.White;
+            this.GithubBTN.Location = new System.Drawing.Point(632, 39);
+            this.GithubBTN.Name = "GithubBTN";
+            this.GithubBTN.Size = new System.Drawing.Size(75, 21);
+            this.GithubBTN.TabIndex = 3;
+            this.GithubBTN.Text = "GitHub";
+            this.GithubBTN.UseVisualStyleBackColor = false;
+            this.GithubBTN.Click += new System.EventHandler(this.GithubBTN_Click);
+            // 
+            // AboutBTN
+            // 
+            this.AboutBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(90)))), ((int)(((byte)(49)))));
+            this.AboutBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AboutBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AboutBTN.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutBTN.ForeColor = System.Drawing.Color.White;
+            this.AboutBTN.Location = new System.Drawing.Point(551, 39);
+            this.AboutBTN.Name = "AboutBTN";
+            this.AboutBTN.Size = new System.Drawing.Size(75, 21);
+            this.AboutBTN.TabIndex = 4;
+            this.AboutBTN.Text = "About";
+            this.AboutBTN.UseVisualStyleBackColor = false;
+            this.AboutBTN.Click += new System.EventHandler(this.AboutBTN_Click);
+            // 
+            // SiteLinkLabel
+            // 
+            this.SiteLinkLabel.AutoSize = true;
+            this.SiteLinkLabel.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SiteLinkLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SiteLinkLabel.Location = new System.Drawing.Point(281, 339);
+            this.SiteLinkLabel.MinimumSize = new System.Drawing.Size(50, 10);
+            this.SiteLinkLabel.Name = "SiteLinkLabel";
+            this.SiteLinkLabel.Size = new System.Drawing.Size(50, 21);
+            this.SiteLinkLabel.TabIndex = 10;
+            this.SiteLinkLabel.Click += new System.EventHandler(this.SiteLinkLabel_Click);
             // 
             // MainForm
             // 
@@ -137,6 +201,8 @@ namespace KitsuAPP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(43)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SiteLinkLabel);
+            this.Controls.Add(this.miscInfoLabel);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.titleLabel);
@@ -167,6 +233,10 @@ namespace KitsuAPP
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.Label miscInfoLabel;
+        private System.Windows.Forms.Button GithubBTN;
+        private System.Windows.Forms.Button AboutBTN;
+        private System.Windows.Forms.Label SiteLinkLabel;
     }
 }
 

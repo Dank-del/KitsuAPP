@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("KitsuAPP")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("An app to search anime and fetch data on Kitsu.io")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dank-del")]
 [assembly: AssemblyProduct("KitsuAPP")]
-[assembly: AssemblyCopyright("Copyright © Dank-del 2021")]
+[assembly: AssemblyCopyright("Copyright © 2021 Dank-del")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
